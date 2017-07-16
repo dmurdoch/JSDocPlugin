@@ -9,12 +9,18 @@ in the RStudio editor) for the next function header, and
 extracts the argument names.
 }
 \usage{
-getArgList(text = getSource())
+getArgList(text = getSource(), start = attr(text, "start"), id = attr(text, "id"))
 }
 \arguments{
   \item{text}{
-Javascript source code, perhaps with a \code{"start"} attribute
+Javascript source code, perhaps with \code{"start"} and \code{"file"} attributes
 to indicate its starting location in a file.
+}
+  \item{start}{
+Where is the function definition?
+}
+  \item{id}{
+The id of the source file containing the Javascript.
 }
 }
 \value{

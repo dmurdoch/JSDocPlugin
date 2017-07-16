@@ -22,5 +22,6 @@ the section in the source editor.
 }
 
 \examples{
-getSource()
+if (rstudioapi::isAvailable())
+  getSource()
 }

@@ -8,5 +8,5 @@ getSource <- function(len = 100) {
     text <- ctxt$contents[start[1]:min(length(ctxt$contents), start[1] + len - 1)]
     text[1] <- substr(text[1], start[2], nchar(text[1]))
   }
-  structure(text, start = start)
+  structure(text, start = start, id = ctxt$id)
 }

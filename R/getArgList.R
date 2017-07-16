@@ -1,5 +1,6 @@
-getArgList = function(text = getSource()) {
-  start <- attr(text, "start")
+getArgList = function(text = getSource(),
+                      start = attr(text, "start"),
+                      id = attr(text, "id")) {
   if (is.null(start))
     start <- rstudioapi::document_position(1,1)
   tokens <- try(js::esprima_tokenize(text, loc = TRUE))
@@ -44,6 +45,6 @@ getArgList = function(text = getSource()) {
     if (tokens$comma[i])
       drop <- FALSE
   }
-  structure(tokens$value[argname], start = start)
+  structure(tokens$value[argname], start = start, id = id)
 }
 # function(m = 1 + v)
