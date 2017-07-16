@@ -1,0 +1,4 @@
+Name: Insert JSDoc skeleton
+Description: Inserts JSDoc markup into Javascript source file
+Binding: insertJSDocAddin
+Interactive: false

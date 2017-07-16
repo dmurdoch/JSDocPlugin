@@ -1,4 +1,4 @@
-insertJSDocSkeleton <- function(args = getArgList(), memberof = NULL,
+insertJSDocSkeleton <- function(args = getArgList(), memberof = getOption("JSDoc.memberof"),
                                 addWhitespace = TRUE,
                                 start = attr(args, "start"),
                                 id = attr(args, "id")) {
@@ -23,4 +23,8 @@ insertJSDocSkeleton <- function(args = getArgList(), memberof = NULL,
   start[2] <- Inf
   rstudioapi::setCursorPosition(start, id = id)
   invisible(result)
+}
+
+insertJSDocAddin <- function() {
+  insertJSDocSkeleton()
 }

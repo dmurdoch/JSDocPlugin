@@ -9,7 +9,7 @@ will insert a JSDoc skeleton for the documentation.
 }
 \usage{
 insertJSDocSkeleton(args = getArgList(),
-                    memberof = NULL,
+                    memberof = getOption("JSDoc.memberof"),
                     addWhitespace = TRUE,
                     start = attr(args, "start"),
                     id = attr(args, "id"))
@@ -35,4 +35,9 @@ The id of the source file containing the Javascript.
 \value{
 Mainly called for the side effect of inserting the
 markup comments, but does return the insertion invisibly.
+}
+\details{
+If an option named \code{"JSDoc.memberof"} is set using the
+\code{\link{options}} function, it will be inserted
+as the \code{@memberof} tag when the skeleton is created.
 }
