@@ -1,0 +1,13 @@
+Package: JSDocPlugin
+Type: Package
+Title: RStudio Plugin for JSDoc Insertions
+Version: 0.1.0
+Author: Duncan Murdoch
+Maintainer: Duncan Murdoch <murdoch.duncan@gmail.com>
+Description: This is an RStudio plugin to facilitate documentation
+ of Javascript code.  It inserts skeleton markup for the next
+ function definition in the source code.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Imports: js, rstudioapi
