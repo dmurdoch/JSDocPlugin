@@ -10,4 +10,4 @@ Description: This is an RStudio plugin to facilitate documentation
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-Imports: js, rstudioapi
+Imports: js (> 1.0), rstudioapi
