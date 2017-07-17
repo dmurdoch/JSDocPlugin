@@ -41,4 +41,7 @@ markup comments, but does return the insertion invisibly.
 If an option named \code{"JSDoc.memberof"} is set using the
 \code{\link{options}} function, it will be inserted
 as the \code{@memberof} tag when the skeleton is created.
+
+If no such option is present when this package is loaded, it
+will be initialized to \code{c("@memberof ?", "@returns { ? }")}.
 }
