@@ -30,3 +30,8 @@ it will insert markup so it looks like
 ```
 
 It's up to you to add the descriptive comments.
+
+To install in RStudio, simply install this package in R and in RStudio it
+will appear as  "Insert JSDoc Skeleton" in the Tools menu.  To
+attach to a hotkey,  use RStudio's "Tools | Addins | Browse Addins... | Keyboard Shortcuts" menu
+to set a shortcut.
