@@ -9,7 +9,7 @@ will insert a JSDoc skeleton for the documentation.
 }
 \usage{
 insertJSDocSkeleton(args = getArgList(),
-                    memberof = getOption("JSDoc.memberof"),
+                    tags = getOption("JSDoc.tags"),
                     addWhitespace = TRUE,
                     start = attr(args, "start"),
                     id = attr(args, "id"))
@@ -18,8 +18,9 @@ insertJSDocSkeleton(args = getArgList(),
   \item{args}{
 The arguments that will need documenting.
 }
-  \item{memberof}{
-An identifier to use in \code{@memberof} markup.
+  \item{tags}{
+Extra tags (e.g. \code{@memberof}) or other markup to
+embed in the generated text.
 }
   \item{addWhitespace}{
 Should leading whitespace be added, to match the line

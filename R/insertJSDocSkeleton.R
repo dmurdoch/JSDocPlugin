@@ -1,4 +1,4 @@
-insertJSDocSkeleton <- function(args = getArgList(), memberof = getOption("JSDoc.memberof"),
+insertJSDocSkeleton <- function(args = getArgList(), tags = getOption("JSDoc.tags"),
                                 addWhitespace = TRUE,
                                 start = attr(args, "start"),
                                 id = attr(args, "id")) {
@@ -7,8 +7,8 @@ insertJSDocSkeleton <- function(args = getArgList(), memberof = getOption("JSDoc
   result <- c(
      "/**",
      " * ?",
-     if (!is.null(memberof)) paste(" * @memberof", memberof),
-     paste(" * @param", args),
+     if (!is.null(tags)) paste(" *", tags),
+     paste(" * @param { ? }", args, "- ?"),
      " */")
   if (addWhitespace) {
     ctxt <- rstudioapi::getSourceEditorContext()
